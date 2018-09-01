@@ -1,0 +1,43 @@
+# for this I was thinking of doing a conversion from c++ to python
+# below is the c++ code to get the maximum number of four entered numbers, see if you can convert it to python
+# afterthought - these do not check for type very well, that might be something worth bringing up to the kids
+# to talk about where it can be improved upon
+int max_of_four()
+{
+	int a, b, c, d;
+	std::cin >> a >> b >> c >> d;
+	std::vector<int> myvec;
+	myvec = { a, b, c, d };
+	int largestval = a;
+	for (auto& i : myvec)
+	{
+		if (i > largestval)
+		{
+			largestval = i;
+		}
+	}
+	std::cout << largestval << std::endl;
+	return largestval;
+}
+
+# python version
+# only thing missing from this is actually calling the function
+# i tried to keep the c++ vs the python version fairly close to easily look between the two
+def max_of_four():
+    a = input()
+    b = input()
+    c = input()
+    d = input()
+
+    def easy_way():
+        # here is one arguably way too easy way to solve this
+        print(max(a, b, c, d))
+
+    def hard_way():
+        num_list = [a, b, c, d]
+        max_num = a
+        for i in num_list:
+            if i > max_num:
+                max_num = i
+        print(max_num)
+    hard_way()
