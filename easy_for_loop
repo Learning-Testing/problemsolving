@@ -1,0 +1,9 @@
+# print the numbers 1-10
+
+#unfixed
+for i in range(1, 10)
+    print(i)
+    
+#fixed
+for i in range(1, 11):
+    print(i)
